@@ -1,0 +1,59 @@
+@use "sass:math";
+
+//*<Base>=======================================================================================================
+
+@import "base/fonts.scss";
+@import "base/function";
+@import "base/animation";
+@import "base/variables";
+@import "base/nullstyle";
+@import "base/common";
+
+//*</Base>=====================================================================================================
+
+//*<Components>================================================================================================
+
+@import "components/site-header";
+@import "components/site-footer";
+
+//*</Components>=================================================================================================
+
+//*<Main grid>==================================================================================================
+
+.wrapper {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    overflow: clip;
+}
+
+.container {
+    max-width: $maxWidthContainer;
+    margin: 0 auto;
+    padding: 0 16px;
+
+    @media (max-width: 1200px) {
+        max-width: 960px;
+    }
+    @media (max-width: 992px) {
+        max-width: 720px;
+    }
+    @media (max-width: 768px) {
+        max-width: 540px;
+    }
+    @media (max-width: 576px) {
+        max-width: none;
+    }
+}
+
+.site-page{
+    flex: 1 1 auto;
+}
+
+
+//*</Main grid>=================================================================================================
+
+//TODO<Blocks>=================================================================================================
+
+
+//TODO</Blocks>=================================================================================================

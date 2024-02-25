@@ -1,0 +1,84 @@
+html,
+body {
+    font-family: $fontFamily;
+    font-size: 16px;
+    line-height: 130%;
+    color: $colorFont;
+    font-weight: 400;
+    scrollbar-gutter: stable;
+    background: url('@img/placeholder.png') 0 0 no-repeat;
+
+    &::-webkit-scrollbar {
+        width: 4px;
+        height: 4px;
+    }
+
+    &::-webkit-scrollbar-track {
+        background: 0 0;
+    }
+
+    &::-webkit-scrollbar-thumb {
+        background-color: $colorMain;
+        border-radius: 20px;
+        border: 1px solid transparent;
+    }
+
+    scrollbar-width: 4px;
+    scrollbar-color: $colorMain #fff;
+}
+
+body {
+    &.lock {
+        overflow: hidden;
+    }
+}
+
+// Titles
+
+h1,
+h2,
+h3,
+h4 {
+}
+
+// P
+
+p {
+    & + p {
+    }
+}
+
+// Ul, Ol
+
+ol,
+ul {
+}
+
+// Img
+
+img {
+    max-width: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+// Svg
+
+svg {
+    max-width: 100%;
+}
+
+// Visually hidden
+
+.visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    border: 0;
+    padding: 0;
+    white-space: nowrap;
+    clip-path: inset(100%);
+    clip: rect(0 0 0 0);
+    overflow: hidden;
+}
