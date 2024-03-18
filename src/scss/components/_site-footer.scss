@@ -1,0 +1,119 @@
+.site-footer {
+    background: $colorMain;
+    color: #fff;
+
+    @media (max-width: 992px) {
+        padding: 50px 0;
+    }
+
+    &__body {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 64px;
+
+        @media (max-width: 1200px) {
+            gap: 48px;
+        }
+
+        @media (max-width: 992px) {
+            flex-direction: column;
+            align-items: stretch;
+            gap: 50px;
+        }
+    }
+
+    &__left {
+    }
+
+    &__title.small-title {
+        color: #fff;
+        font-size: 45px;
+        line-height: toProcent(45, 54);
+    }
+
+    &__social {
+        margin-bottom: 25px;
+        color: #fff;
+        display: block;
+        width: fit-content;
+        border-bottom: 1px solid transparent;
+        font-size: 20px;
+        line-height: toProcent(20, 24);
+
+        &:hover {
+            border-color: #fff;
+        }
+    }
+
+    &__address {
+        &-link {
+            display: block;
+            width: fit-content;
+            color: #b8dcff;
+            font-style: normal;
+            border-bottom: 1px solid transparent;
+
+            @media (max-width: 768px) {
+                font-size: 14px;
+                line-height: toProcent(14, 17);
+            }
+
+            &:hover {
+                color: #fff;
+                border-color: #fff;
+            }
+        }
+    }
+
+    &__logo {
+        display: block;
+        width: 184px;
+        aspect-ratio: 184/40;
+
+        @media (min-width: 992px) {
+            margin-top: 50px;
+        }
+
+        @media (max-width: 992px) {
+            align-self: center;
+        }
+
+        &--desktop {
+            @media (max-width: 992px) {
+                display: none;
+            }
+        }
+
+        &--mobile {
+            @media (min-width: 992px) {
+                display: none;
+            }
+        }
+    }
+
+    &__map {
+        width: 660px;
+        height: auto;
+        flex: none;
+        aspect-ratio: 660/545;
+        background: #fff;
+
+        @media (max-width: 1200px) {
+            width: 500px;
+        }
+
+        @media (max-width: 992px) {
+            width: 70%;
+            align-self: center;
+        }
+
+        @media (max-width: 768px) {
+            width: 100%;
+        }
+
+        @media (max-width: 480px) {
+            width: calc(100% + (100vw - 300px));
+        }
+    }
+}

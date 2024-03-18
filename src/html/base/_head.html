@@ -1,8 +1,15 @@
 <head>
-    <meta charset="UTF-8">
+    <meta charset="UTF-8" />
     <title>@@title</title>
-    <meta name="description" content="Site description">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- <link rel="stylesheet" href="./files/swiper-bundle.min.css"> -->
-    <link rel="stylesheet" href="css/main.min.css">
+    <meta
+        name="description"
+        content="Cryogenic and vacuum systems Ltd (CVS) was established in 2014 by experienced scientists and engineers from aerospace industry with the purpose of bringing practical and reliable vacuum and cryogenic technologies to the consumer at an affordable price."
+    />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    @@if (isNeedSwiper === true) {
+        <link rel="stylesheet" href="./files/swiper-bundle.min.css" />
+    }
+    @@for (let i = 0; i < styles.length; i++) {
+    <link rel="stylesheet" href="css/`+styles[i]+`.min.css" />
+    }
 </head>

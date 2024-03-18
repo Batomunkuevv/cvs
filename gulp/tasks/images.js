@@ -23,7 +23,7 @@ export const images = () => {
                 app.isBuild,
                 imagemin(
                     [
-                        imageminJpegRecompress({ method: "smallfry", loops: 5, min: 65, max: 70, quality: "medium" }),
+
                         imageminJpegtran({ progressive: true }),
                         imageminSvgo({
                             plugins: [{ removeDimensions: true }, { removeAttrs: true }, { removeElementsByAttr: true }, { removeStyleElement: true }, { removeViewBox: false }],

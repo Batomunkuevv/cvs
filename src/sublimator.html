@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="ru">
+    @@include('html/base/_head.html', { 'title': 'Cryogenic and Vacuum Systems presents: DryEat® Sublimators', 'isNeedSwiper': false, styles: [ 'sublimator' ] })
+
+    <body>
+        <div class="wrapper">
+            @@include('html/base/_header.html',{})
+            <main class="site-page">
+                <article>
+                    @@include('html/sublimator/_sublimator.html',{}) @@include('html/sublimator/_other-products.html',{})
+                    <div class="container">
+                        <a href="/" class="button-to-homepage button button--border">Home Page</a>
+                    </div>
+                </article>
+            </main>
+            @@include('html/base/_footer.html',{})
+        </div>
+        <script defer src="js/lozad.min.js"></script>
+        <script defer src="js/script.js"></script>
+    </body>
+</html>

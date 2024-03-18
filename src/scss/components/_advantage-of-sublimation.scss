@@ -1,0 +1,38 @@
+.advantage-of-sublimation {
+    display: flex;
+    align-items: center;
+    gap: 39px;
+
+    @media(max-width: 992px){
+        flex-direction: column;
+        gap: 25px;
+    }
+
+    &__image {
+        aspect-ratio: 460/300;
+        width: 460px;
+        flex: none;
+        border-radius: 16px;
+        overflow: hidden;
+
+        @media(max-width: 1200px){
+            width: 360px;
+        }
+
+        @media(max-width: 992px){
+            width: 100%;
+        }
+    }
+
+    &__content {
+    }
+
+    &__title {
+        margin-bottom: 15px;
+        font-size: 20px;
+        line-height: toProcent(20, 24);
+    }
+
+    &__text {
+    }
+}

@@ -1,18 +1,29 @@
 <!DOCTYPE html>
 <html lang="ru">
-@@include('html/base/_head.html', { 'title': 'Name site'})
+    @@include('html/base/_head.html', { 'title': 'Cryogenic and Vacuum Systems presents: DryEat® Sublimators', 'isNeedSwiper': true, styles: [ 'main' ] })
 
-<body>
-    <div class="wrapper">
-        @@include('html/base/_header.html',{})
-        <main class="site-page">
-        </main>
-        @@include('html/base/_footer.html',{})
-    </div>
-    <!-- <script defer src="https://api-maps.yandex.ru/2.1/?apikey=b658fbcb-d920-4069-8b3d-c898776778a0&lang=ru_RU"></script> -->
-    <!-- <script defer src="js/lozad.min.js"></script> -->
-    <!-- <script defer src="js/swiper-bundle.min.js"></script> -->
-    <script defer src="js/app.js"></script>
-</body>
-
+    <body>
+        <div class="wrapper">
+            @@include('html/base/_header-homepage.html',{})
+            <main class="site-page site-page--on-home">
+                @@include('html/homepage/_hero.html',{})
+                @@include('html/homepage/_about-company.html',{})
+                @@include('html/homepage/_team.html',{})
+                @@include('html/homepage/_sublimators.html',{})
+                @@include('html/homepage/_achievements.html',{})
+                @@include('html/homepage/_what-is-sublimation.html',{})
+                @@include('html/homepage/_advantages-of-sublimation.html',{})
+                @@include('html/homepage/_sublimated-products.html',{})
+                @@include('html/homepage/_subsidies.html',{})
+                @@include('html/homepage/_engineering-services.html',{})
+                @@include('html/homepage/_dry-eat-relink.html',{})
+                @@include('html/homepage/_success-stories.html',{})
+                @@include('html/homepage/_contact-us.html',{})
+            </main>
+            @@include('html/base/_footer.html',{})
+        </div>
+        <script defer src="js/lozad.min.js"></script>
+        <script defer src="js/swiper-bundle.min.js"></script>
+        <script defer src="js/script.js"></script>
+    </body>
 </html>

@@ -1,0 +1,56 @@
+.what-is-sublimation {
+    padding: 66px 100px 66px 60px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 64px;
+
+    @media (min-width: 992px) {
+        background: #fff;
+        box-shadow: 4px 4px 4px rgba(20, 85, 148, 0.25);
+        border-radius: 16px;
+    }
+
+    @media (max-width: 1200px) {
+        padding: 48px 40px;
+    }
+
+    @media (max-width: 992px) {
+        padding: 0;
+        flex-direction: column;
+        align-items: stretch;
+        gap: 50px;
+    }
+
+    @media (max-width: 768px) {
+        margin-top: -25px;
+    }
+
+    &__text {
+        max-width: 600px;
+        font-size: 20px;
+        line-height: toProcent(20, 24);
+
+        @media (max-width: 768px) {
+            font-size: 17px;
+            line-height: toProcent(17, 21);
+        }
+    }
+
+    &__btn.button {
+        padding: 16px 24px;
+        width: 260px;
+        flex: none;
+
+        @media (max-width: 768px) {
+            padding: 12px 24px;
+            height: 45px;
+            font-size: 17px;
+            line-height: toProcent(17, 21);
+        }
+
+        @media (max-width: 576px) {
+            width: 100%;
+        }
+    }
+}

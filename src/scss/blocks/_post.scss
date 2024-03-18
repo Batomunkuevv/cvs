@@ -1,0 +1,25 @@
+.post {
+    padding-top: 7px;
+
+    @media(max-width: 768px){
+        padding-top: 29px;
+    }
+
+    &__body {
+    }
+
+    &__title {
+        margin-bottom: 39px;
+
+        @media(max-width: 768px){
+            margin-bottom: 26px;
+        }
+    }
+
+    &__content {
+        @media(max-width: 576px){
+            font-size: 13px;
+            line-height: toProcent(13, 16);
+        }
+    }
+}

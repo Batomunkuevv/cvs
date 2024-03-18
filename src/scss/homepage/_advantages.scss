@@ -1,0 +1,215 @@
+.advantages-of-sublimation {
+    &__slider {
+        margin-bottom: 51px;
+        margin-left: 100px;
+        max-width: 887px;
+        position: relative;
+
+        @media (max-width: 1200px) {
+            padding: 0 80px;
+            margin-left: 0;
+        }
+
+        @media (max-width: 768px) {
+            padding: 0 56px;
+            margin-bottom: 35px;
+        }
+
+        @media (max-width: 480px) {
+            margin-left: calc((-100vw + 300px) / 2);
+            margin-right: calc((-100vw + 300px) / 2);
+            padding-left: calc((100vw - 300px) / 2);
+            padding-right: calc((100vw - 300px) / 2);
+        }
+
+        &-body {
+        }
+
+        &-wrapper {
+        }
+
+        &-slide {
+        }
+    }
+
+    &__arrows {
+    }
+
+    &__arrow {
+        position: absolute;
+        top: 50%;
+        z-index: 2;
+
+        &--prev {
+            left: -41px;
+            transform: translate(-100%, -49%);
+
+            @media (max-width: 1200px) {
+                left: 0;
+                transform: translateY(-49%);
+            }
+
+            @media (max-width: 992px) {
+                top: 150px;
+                transform: unset;
+            }
+
+            @media (max-width: 992px) {
+                top: 130px;
+            }
+
+            @media (max-width: 576px) {
+                top: 113px;
+            }
+
+            @media (max-width: 480px) {
+                top: 81px;
+            }
+        }
+
+        &--next {
+            right: -231px;
+            transform: translate(-100%, -49%);
+
+            @media (max-width: 1200px) {
+                right: 0;
+                transform: translateY(-49%);
+            }
+
+            @media (max-width: 992px) {
+                top: 150px;
+                transform: unset;
+            }
+
+            @media (max-width: 992px) {
+                top: 130px;
+            }
+
+            @media (max-width: 576px) {
+                top: 113px;
+            }
+
+            @media (max-width: 480px) {
+                top: 81px;
+            }
+        }
+    }
+
+    &__body {
+        display: flex;
+        gap: 38px;
+
+        @media (max-width: 992px) {
+            flex-direction: column;
+            gap: 50px;
+        }
+    }
+
+    &__overview {
+        padding: 25px 32px;
+        margin-top: 16px;
+        background: #fff;
+        box-shadow: 4px 4px 4px rgba(20, 85, 148, 0.25);
+        border-radius: 16px;
+        font-size: 15px;
+        line-height: toProcent(15, 18);
+
+        @media (max-width: 480px) {
+            font-size: 11px;
+            line-height: toProcent(11, 13);
+            box-shadow: 3px 3px 10px rgba(20, 85, 148, 0.25);
+            margin-left: calc((-100vw + 300px) / 2);
+            margin-right: calc((-100vw + 300px) / 2);
+            padding-left: calc((100vw - 300px) / 2);
+            padding-right: calc((100vw - 300px) / 2);
+        }
+
+        &-author {
+            margin-bottom: 12px;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+
+            &-image {
+                width: 60px;
+                aspect-ratio: 1/1;
+                border-radius: 50%;
+                overflow: hidden;
+            }
+
+            &-name {
+                color: $colorMain;
+                font-weight: 700;
+            }
+        }
+
+        &-title {
+            margin-bottom: 12px;
+        }
+
+        &-text {
+        }
+    }
+
+    &__examples {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 39px;
+        width: 557px;
+        flex: none;
+
+        @media (max-width: 1200px) {
+            width: 440px;
+            gap: 24px;
+        }
+
+        @media (max-width: 992px) {
+            width: 520px;
+            align-self: center;
+        }
+
+        @media (max-width: 576px) {
+            width: 460px;
+        }
+
+        @media (max-width: 480px) {
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            gap: 77px;
+        }
+    }
+
+    &__example {
+        &-name {
+            margin-bottom: 52px;
+            font-weight: 700;
+            font-size: 20px;
+            line-height: toProcent(20, 24);
+            text-align: center;
+            color: $colorMain;
+        }
+
+        &-image {
+            width: 260px;
+            aspect-ratio: 260/205;
+
+            @media (max-width: 1200px) {
+                width: 220px;
+            }
+
+            @media (max-width: 992px) {
+                width: 260px;
+            }
+
+            @media (max-width: 576px) {
+                width: 230px;
+            }
+
+            @media (max-width: 480px) {
+                width: 260px;
+                margin: 0 auto;
+            }
+        }
+    }
+}

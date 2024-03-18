@@ -1,0 +1,34 @@
+.dry-eat-relink {
+    display: flex;
+    align-items: center;
+    gap: 140px;
+    
+    @media(min-width: 1200px){
+        margin-left: 100px;
+    }
+
+    @media(max-width: 1200px){
+        gap: 64px;
+        justify-content: center;
+    }
+
+    @media(max-width: 992px){
+        flex-direction: column;
+        gap: 50px;
+    }
+
+    &__title {
+        margin-bottom: 0;
+        font-weight: 400;
+
+        @media(max-width: 768px){
+            font-size: 32px;
+            line-height: toProcent(32, 39);
+        }
+    }
+
+    &__button {
+        width: 260px;
+        flex: none;
+    }
+}

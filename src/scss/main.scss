@@ -8,13 +8,26 @@
 @import "base/variables";
 @import "base/nullstyle";
 @import "base/common";
+@import "base/swiper";
 
 //*</Base>=====================================================================================================
 
 //*<Components>================================================================================================
 
+@import "components/slider-arrow";
 @import "components/site-header";
 @import "components/site-footer";
+@import "components/section";
+@import "components/team-member";
+@import "components/advantage-of-sublimation";
+@import "components/sublimator-card";
+@import "components/success-story";
+@import "components/sublimated-product";
+@import "components/subsidie";
+@import "components/menu";
+@import "components/burger";
+@import "components/button";
+@import "components/input";
 
 //*</Components>=================================================================================================
 
@@ -30,7 +43,7 @@
 .container {
     max-width: $maxWidthContainer;
     margin: 0 auto;
-    padding: 0 16px;
+    padding: 0 15px;
 
     @media (max-width: 1200px) {
         max-width: 960px;
@@ -42,18 +55,45 @@
         max-width: 540px;
     }
     @media (max-width: 576px) {
-        max-width: none;
+        max-width: 480px;
+        padding: 0 10px;
+    }
+
+    @media (max-width: 480px) {
+        max-width: 320px;
+        padding: 0 10px;
     }
 }
 
-.site-page{
+.site-page {
+    padding-bottom: 50px;
     flex: 1 1 auto;
-}
 
+    &--on-home {
+        padding-bottom: 100px;
+
+        @media (max-width: 992px) {
+            padding-bottom: 50px;
+        }
+    }
+}
 
 //*</Main grid>=================================================================================================
 
 //TODO<Blocks>=================================================================================================
 
+@import "homepage/hero.scss";
+@import "homepage/about-company";
+@import "homepage/team";
+@import "homepage/sublimators";
+@import "homepage/achievements";
+@import "homepage/what-is-sublimation";
+@import "homepage/advantages";
+@import "homepage/sublimated-products";
+@import "homepage/subsidies";
+@import "homepage/engineering-services";
+@import "homepage/dry-eat-relink";
+@import "homepage/success-stories";
+@import "homepage/contact-us";
 
 //TODO</Blocks>=================================================================================================

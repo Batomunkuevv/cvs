@@ -1,0 +1,50 @@
+.menu {
+    padding: 50px;
+    background: $colorMain;
+    transition: all 0.3s ease-in-out 0s;
+
+    @media (max-width: 768px) {
+        padding: 0;
+        background: unset;
+    }
+
+    &:not(.is-open) {
+        @media (min-width: 768px) {
+            transform: translateX(50%);
+            opacity: 0;
+            visibility: hidden;
+        }
+    }
+
+    &__list {
+    }
+
+    &__item {
+        &:not(:last-child) {
+            margin-bottom: 25px;
+        }
+    }
+
+    &__link {
+        display: block;
+        width: fit-content;
+        color: rgba(255, 255, 255, 0.7);
+
+        @media (max-width: 768px) {
+            color: $colorMain;
+            margin-left: auto;
+            margin-right: auto;
+            border-bottom: 1px solid $colorMain;
+        }
+
+        &:hover {
+            @media (min-width: 768px) {
+                color: #fff;
+            }
+
+            @media(max-width: 768px){
+                border-color: transparent;
+            }
+        }
+    }
+}

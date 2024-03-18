@@ -1,0 +1,104 @@
+.team {
+    max-width: 760px;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+
+    @media (max-width: 992px) {
+        max-width: unset;
+    }
+
+    @media (max-width: 576px) {
+        width: calc(100% + (100vw - 300px));
+        margin-left: calc((-100vw + 300px) / 2);
+    }
+
+    &__slider {
+        padding: 24px;
+        padding-bottom: 35px;
+        margin: -24px -24px 36px;
+
+        @media (min-width: 1200px) {
+            left: -4px;
+        }
+
+        @media (max-width: 992px) {
+            padding-bottom: 85px;
+        }
+
+        &-wrapper {
+        }
+
+        &-slide {
+            height: unset !important;
+        }
+
+        &-pagination {
+            @media (max-width: 992px) {
+                bottom: 20px !important;
+            }
+        }
+    }
+
+    &__arrow {
+        position: absolute;
+        top: 50%;
+        z-index: 2;
+        width: 50px;
+        height: 50px;
+
+        @media (max-width: 992px) {
+            top: auto;
+            bottom: 0;
+        }
+
+        &--prev {
+            left: -39px;
+            transform: translate(-100%, -103%);
+
+            @media (max-width: 995px) {
+                left: 50%;
+                transform: translateX(calc(-100% - 96px));
+            }
+        }
+
+        &--next {
+            right: -31px;
+            transform: translate(100%, -103%);
+
+            @media (max-width: 995px) {
+                right: 50%;
+                transform: translateX(calc(100% + 95px));
+            }
+        }
+
+        &--desktop {
+            @media (max-width: 992px) {
+                display: none;
+            }
+        }
+
+        &--mobile {
+            @media (min-width: 992px) {
+                display: none;
+            }
+        }
+    }
+
+    &__bottom-text {
+        margin: 0 auto;
+        text-align: center;
+        max-width: 600px;
+        color: $colorMain;
+
+        @media (min-width: 992px) {
+            font-size: 15px;
+            line-height: toProcent(15, 18);
+        }
+
+        @media (max-width: 576px) {
+            max-width: 280px;
+        }
+    }
+}

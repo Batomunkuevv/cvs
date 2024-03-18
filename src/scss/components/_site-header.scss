@@ -1,0 +1,141 @@
+.site-header {
+    padding: 15px 0;
+    margin-bottom: 80px;
+    position: sticky;
+    top: 0;
+    left: 0;
+    z-index: 100;
+    background: #fff;
+    box-shadow: 0 4px 4px rgba(20, 85, 148, 0.15);
+    transition: all 0.3s ease-in-out 0s;
+
+    @media (max-width: 992px) {
+        margin-bottom: 64px;
+    }
+
+    @media (max-width: 768px) {
+        margin-bottom: 50px;
+        padding: 12px 0;
+    }
+
+    &.is-scrolling-down {
+        transform: translateY(-100%);
+    }
+
+    &__body {
+        display: flex;
+        align-items: center;
+        position: relative;
+    }
+
+    &__panel {
+        display: flex;
+        align-items: center;
+
+        @media (max-width: 768px) {
+            padding: 56px calc((100vw - 510px) / 2);
+            flex-direction: column;
+            position: fixed;
+            top: 53px;
+            bottom: -1px;
+            left: 0;
+            right: 0;
+            overflow: auto;
+            background: #fff;
+            text-align: center;
+            transition: all 0.5s ease-in-out 0s;
+        }
+
+        @media (max-width: 576px) {
+            padding: 32px calc((100vw - 460px) / 2);
+        }
+
+        @media (max-width: 480px) {
+            padding: 32px calc((100vw - 300px) / 2);
+        }
+
+        &:not(.is-open) {
+            @media (max-width: 768px) {
+                transform: translateX(50%);
+                opacity: 0;
+                visibility: hidden;
+            }
+        }
+    }
+
+    &__logo {
+        margin-right: auto;
+        aspect-ratio: 184/40;
+        width: 184px;
+
+        @media (max-width: 768px) {
+            width: 140px;
+        }
+    }
+
+    &__phone {
+        margin-left: 50px;
+        border-bottom: 1px solid transparent;
+
+        @media (max-width: 992px) {
+            margin-left: 32px;
+        }
+
+        @media (max-width: 768px) {
+            margin: 0 0 32px 0;
+        }
+
+        &:hover {
+            border-color: $colorMain;
+        }
+    }
+
+    &__btn {
+        margin-left: 50px;
+
+        @media (max-width: 992px) {
+            margin-left: 32px;
+        }
+
+        @media (max-width: 768px) {
+            margin: 0 0 auto 0;
+            width: 100%;
+            max-width: 312px;
+        }
+
+        @media (max-width: 576px) {
+            max-width: 382px;
+        }
+    }
+
+    &__menu {
+        z-index: 100;
+
+        @media (min-width: 768px) {
+            position: absolute;
+            top: calc(100% + 15px);
+            right: 0;
+        }
+
+        @media (max-width: 768px) {
+            margin-top: auto;
+            margin-bottom: 64px;
+        }
+
+        @media (max-width: 576px) {
+            margin-bottom: 48px;
+        }
+    }
+
+    &__burger {
+        margin-left: 100px;
+
+        @media (max-width: 1200px) {
+            margin-left: 50px;
+        }
+
+        @media (max-width: 992px) {
+            margin-left: 32px;
+        }
+    }
+}

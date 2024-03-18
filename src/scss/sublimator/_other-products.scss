@@ -1,0 +1,45 @@
+.other-products {
+    margin-top: 50px;
+
+    &__title {
+        margin-bottom: 35px;
+        font-size: 25px;
+        line-height: toProcent(25, 30);
+        font-weight: 500;
+        color: #000000;
+
+        @media(max-width: 768px){
+            margin-bottom: 25px;
+            font-size: 20px;
+            line-height: toProcent(20, 24);
+        }
+    }
+
+    &__list {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(276px, 1fr));
+        gap: 11px;
+
+        @media(max-width: 992px){
+            gap: 25px;
+        }
+    }
+
+    &__item {
+        &-link {
+            padding: 15px 60px;
+            height: 54px;
+            border-radius: 16px;
+
+            @media(max-width: 992px){
+                border-radius: 6px;
+                background: $colorMain;
+                color: #fff;
+            }
+
+            @media(max-width: 768px){
+                height: 56px;
+            }
+        }
+    }
+}

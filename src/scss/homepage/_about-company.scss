@@ -1,0 +1,92 @@
+.about-company {
+    margin-top: 70px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 40px;
+
+    @media (max-width: 992px) {
+        margin-top: 50px;
+        gap: 32px;
+    }
+
+    @media (max-width: 768px) {
+        grid-template-columns: 1fr;
+        gap: 50px;
+    }
+
+    &__column {
+        color: $colorMain;
+
+        @media (max-width: 768px) {
+            font-size: 14px;
+            line-height: toProcent(14, 17);
+        }
+
+        &:nth-child(1) {
+            & .about-company__column-logo {
+                width: 120px;
+                aspect-ratio: 120/115;
+
+                @media (max-width: 992px) {
+                    width: 50%;
+                }
+
+                @media (max-width: 768px) {
+                    width: 120px;
+                }
+            }
+        }
+
+        &:nth-child(2) {
+            & .about-company__column-logo {
+                margin-top: 11px;
+                margin-bottom: 66px;
+                width: 360px;
+                aspect-ratio: 360/93;
+
+                @media (max-width: 992px) {
+                    width: 100%;
+                    margin-top: 11px;
+                    margin-bottom: 79px;
+                }
+
+                @media (max-width: 768px) {
+                    margin-top: 0;
+                    margin-bottom: 50px;
+                    width: 300px;
+                }
+            }
+        }
+
+        &:nth-child(3) {
+            & .about-company__column-logo {
+                margin-top: 48px;
+                margin-bottom: 47px;
+                width: 253px;
+                aspect-ratio: 253/74;
+
+                @media (max-width: 992px) {
+                    margin-top: 28px;
+                    margin-bottom: 69px;
+                    width: 70%;
+                }
+
+                @media (max-width: 768px) {
+                    margin-top: 0;
+                    margin-bottom: 50px;
+                    width: 263px;
+                }
+            }
+        }
+
+        &-logo {
+            margin-left: auto;
+            margin-right: auto;
+            margin-bottom: 55px;
+
+            @media (max-width: 992px) {
+                margin-bottom: 50px;
+            }
+        }
+    }
+}

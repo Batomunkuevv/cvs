@@ -1,0 +1,38 @@
+.button {
+    padding: 14px 23px;
+    height: 56px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 6px;
+    background: $colorMain;
+    border: 1px solid $colorMain;
+    font-size: 20px;
+    line-height: toProcent(20, 24);
+    font-weight: 500;
+    color: #fff;
+    transition: all 0.3s ease-in-out 0s;
+    white-space: nowrap;
+
+    &:hover {
+        background: #fff;
+        color: $colorMain;
+    }
+
+    &--small {
+        height: 50px;
+        font-size: 17px;
+        line-height: toProcent(17, 21);
+    }
+
+    &--border {
+        color: $colorMain;
+        background: #fff;
+        border: 2px solid $colorMain;
+
+        &:hover {
+            background: $colorMain;
+            color: #fff;
+        }
+    }
+}

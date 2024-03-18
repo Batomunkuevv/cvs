@@ -1,0 +1,320 @@
+.sublimator-card {
+    padding: 53px 65px 53px 53px;
+    background: #fff;
+    box-shadow: 4px 4px 4px rgba(20, 85, 148, 0.25);
+    border-radius: 16px;
+    display: flex;
+    align-items: start;
+    gap: 70px;
+    position: relative;
+
+    @media (max-width: 1200px) {
+        padding: 32px 24px;
+        gap: 48px;
+    }
+
+    @media (max-width: 480px) {
+        box-shadow: 3px 3px 10px rgba(20, 85, 148, 0.25);
+        padding-top: 35px;
+        padding-bottom: 35px;
+        padding-left: calc((100vw - 300px) / 2);
+        padding-right: calc((100vw - 300px) / 2);
+    }
+
+    &__image {
+        width: 360px;
+        aspect-ratio: 360/454;
+        flex: none;
+
+        @media (max-width: 1200px) {
+            width: 100%;
+            max-width: 300px;
+            align-self: center;
+        }
+
+        @media (max-width: 992px) {
+            margin-bottom: 15px;
+            order: 4;
+        }
+
+        &--desktop {
+            @media (max-width: 992px) {
+                display: none;
+            }
+        }
+
+        &--mobile {
+            @media (min-width: 992px) {
+                display: none;
+            }
+        }
+    }
+
+    &__content {
+        @media (min-width: 992px) {
+            padding-top: 45px;
+        }
+
+        @media (max-width: 992px) {
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+        }
+    }
+
+    &__title {
+        margin-bottom: 15px;
+        font-size: 25px;
+        line-height: toProcent(25, 30);
+        font-weight: 700;
+
+        @media (max-width: 992px) {
+            margin-bottom: 12px;
+            order: 1;
+        }
+    }
+
+    &__description {
+        margin-bottom: 50px;
+        font-size: 15px;
+        line-height: toProcent(15, 18);
+
+        @media (max-width: 992px) {
+            margin-bottom: 25px;
+            order: 2;
+        }
+
+        @media (max-width: 480px) {
+            max-width: 220px;
+        }
+    }
+
+    &__navigations {
+        display: flex;
+        align-items: end;
+        gap: 50px;
+
+        @media (max-width: 992px) {
+            margin-left: -5px;
+            margin-bottom: 15px;
+            order: 3;
+            align-items: center;
+            gap: 70px;
+        }
+    }
+
+    &__pagination.swiper-pagination {
+        padding-right: 61px;
+        text-align: right;
+        position: absolute;
+        top: 43px;
+        right: 50px;
+        white-space: nowrap;
+
+        @media (max-width: 1200px) {
+            padding-right: 24px;
+        }
+
+        @media (max-width: 992px) {
+            padding: 0;
+            position: static;
+            text-align: left;
+            width: fit-content;
+        }
+    }
+
+    &__button.button {
+        width: 260px;
+
+        @media (max-width: 992px) {
+            padding: 12px 24px;
+            width: fit-content;
+            height: 45px;
+            font-size: 17px;
+            line-height: toProcent(17, 21);
+            font-weight: 400;
+        }
+    }
+
+    &__arrows {
+        display: flex;
+        align-items: center;
+        gap: 25px;
+    }
+
+    &__arrow {
+        @media (max-width: 992px) {
+            position: absolute;
+        }
+
+        &--prev {
+            width: 50px;
+            height: 50px;
+
+            @media (max-width: 992px) {
+                top: 50%;
+                left: 16px;
+                transform: translate(0, -50%);
+            }
+
+            @media (max-width: 480px) {
+                left: 0;
+            }
+        }
+
+        &--next {
+            width: 50px;
+            height: 50px;
+
+            @media (max-width: 992px) {
+                top: 50%;
+                right: 16px;
+                transform: translate(0, -50%);
+            }
+
+            @media (max-width: 480px) {
+                right: 0;
+            }
+        }
+    }
+
+    &__table {
+        margin-bottom: 50px;
+        border-collapse: collapse;
+
+        @media (max-width: 992px) {
+            margin-bottom: 0;
+            order: 5;
+        }
+
+        @media (max-width: 576px) {
+            margin-left: auto;
+            margin-right: auto;
+            width: calc(100% - 16px);
+        }
+
+        &--mobile {
+            @media (min-width: 576px) {
+                display: none;
+            }
+        }
+
+        &--desktop {
+            @media (max-width: 576px) {
+                display: none;
+            }
+        }
+
+        &-header {
+        }
+
+        &-row {
+            &:last-child:not(.sublimator-card__table-row--in-header) {
+                & .sublimator-card__table-cell {
+                    padding-bottom: 0;
+                }
+            }
+
+            &:last-child {
+                & .sublimator-card__table-cell {
+                    @media (max-width: 576px) {
+                        padding-right: 0;
+                    }
+                }
+            }
+        }
+
+        &-cell {
+            vertical-align: top;
+            padding-bottom: 35px;
+            font-size: 15px;
+            line-height: toProcent(15, 18);
+            color: $colorMain;
+
+            @media (max-width: 992px) {
+                padding-bottom: 25px;
+            }
+
+            @media (max-width: 768px) {
+                font-size: 12px;
+                line-height: toProcent(12, 15);
+            }
+
+            &:nth-child(1) {
+                @media (min-width: 576px) {
+                    width: 13.07%;
+                }
+            }
+
+            &:nth-child(2) {
+                @media (min-width: 576px) {
+                    width: 29.08%;
+                }
+            }
+
+            &:nth-child(3) {
+                @media (min-width: 576px) {
+                    width: 33.82%;
+                }
+            }
+
+            &:nth-child(4) {
+                @media (min-width: 576px) {
+                    width: 24.01%;
+                }
+            }
+
+            &:not(.sublimator-card__table-cell--title) {
+                @media (max-width: 576px) {
+                    vertical-align: middle;
+                }
+
+                &:not(:last-child) {
+                    text-align: center;
+
+                    @media (max-width: 992px) {
+                        text-align: left;
+                    }
+
+                    @media (max-width: 576px) {
+                        text-align: center;
+                    }
+                }
+            }
+
+            &--title {
+                color: $colorFont;
+                font-weight: 600;
+                text-align: left;
+
+                @media (max-width: 576px) {
+                    width: 155px;
+                }
+            }
+
+            &--name {
+                font-weight: 700;
+            }
+
+            &:not(:last-child) {
+                padding-right: 35px;
+
+                @media (max-width: 1200px) {
+                    padding-right: 16px;
+                    padding-bottom: 25px;
+                }
+
+                @media (max-width: 576px) {
+                    padding-right: 25px;
+                }
+            }
+
+            & br {
+                display: block;
+            }
+        }
+
+        &-body {
+        }
+    }
+}

@@ -1,0 +1,172 @@
+.charts-sublimation {
+    &__title {
+    }
+
+    &__chart {
+        @media (max-width: 992px) {
+            display: flex;
+            flex-direction: column;
+            gap: 50px;
+        }
+
+        &:not(:last-child) {
+            margin-bottom: 50px;
+
+            @media (max-width: 992px) {
+                padding-bottom: 50px;
+                position: relative;
+            }
+
+            &:after {
+                content: "";
+                position: absolute;
+                left: 0;
+                right: 0;
+                bottom: 0;
+                height: 1px;
+                background: $colorMain;
+
+                @media (max-width: 480px) {
+                    left: calc((-100vw + 300px) / 2);
+                    right: calc((-100vw + 300px) / 2);
+                }
+
+                @media (min-width: 992px) {
+                    display: none;
+                }
+            }
+        }
+    }
+
+    &__image {
+        width: auto;
+        height: 300px;
+
+        @media (min-width: 992px) {
+            margin-bottom: 25px;
+        }
+
+        @media (max-width: 992px) {
+            height: 225px;
+            text-align: center;
+        }
+
+        @media (max-width: 768px) and (min-width: 576px) {
+            height: 182px;
+        }
+
+        @media (max-width: 576px) {
+            aspect-ratio: 300/225;
+            height: auto;
+        }
+
+        &--desktop {
+            @media (max-width: 992px) {
+                display: none;
+            }
+        }
+
+        &--modile {
+            @media (min-width: 992px) {
+                display: none;
+            }
+        }
+
+        &--temperature {
+            @media (max-width: 992px) {
+                height: 238px;
+            }
+
+            @media (max-width: 768px) and (min-width: 576px) {
+                height: 192px;
+            }
+
+            @media (max-width: 576px) {
+                aspect-ratio: 300/238;
+                height: auto;
+            }
+        }
+
+        & img {
+            width: auto;
+        }
+    }
+
+    &__info {
+        display: flex;
+        align-items: center;
+        gap: 50px;
+
+        @media (max-width: 992px) {
+            flex-direction: column;
+            gap: 25px;
+            align-items: stretch;
+        }
+    }
+
+    &__temperatures {
+        display: flex;
+        align-items: center;
+        gap: 30px;
+
+        @media(max-width: 576px){
+            gap: 25px;
+            justify-content: space-between;
+        }
+    }
+
+    &__temperature {
+        padding-left: 25px;
+        font-size: 13px;
+        line-height: toProcent(13, 16);
+        color: #000000;
+        position: relative;
+
+        &::before {
+            content: "";
+            position: absolute;
+            top: 3px;
+            left: 0;
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+        }
+
+        &--small {
+            &::before {
+                background: #fff500;
+            }
+        }
+
+        &--medium {
+            &::before {
+                background: #ff9900;
+            }
+        }
+
+        &--heigh {
+            &::before {
+                background: #ff0000;
+            }
+        }
+    }
+
+    &__description {
+        max-width: 560px;
+
+        @media(max-width: 768px){
+            font-size: 15px;
+            line-height: toProcent(15, 18);
+        }
+    }
+
+    &__images {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 25px;
+
+        @media (max-width: 576px) {
+            grid-template-columns: 1fr;
+        }
+    }
+}

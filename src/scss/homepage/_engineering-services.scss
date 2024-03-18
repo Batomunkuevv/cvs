@@ -1,0 +1,43 @@
+.engineering-services {
+    margin: 0 auto;
+    max-width: 900px;
+    display: grid;
+    grid-template-columns: 1fr 1.223fr;
+    gap: 100px;
+
+    @media(max-width: 1200px){
+        grid-template-columns: repeat(2, 1fr);
+        gap: 64px;
+    }
+
+    @media(max-width: 768px){
+        margin-top: 70px;
+        grid-template-columns: 1fr;
+        gap: 50px;
+    }
+
+    &__item {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+
+        @media (min-width: 768px) {
+            font-size: 20px;
+            line-height: toProcent(20, 24);
+        }
+
+        &-icon {
+            margin-bottom: 30px;
+            width: 100px;
+            aspect-ratio: 1/1;
+
+            @media(max-width: 768px){
+                margin-bottom: 25px;
+            }
+        }
+
+        &-text {
+        }
+    }
+}

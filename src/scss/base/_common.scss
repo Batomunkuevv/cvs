@@ -1,12 +1,27 @@
+:root {
+    --swiper-theme-color: #145594;
+    --swiper-pagination-bullet-size: 10px;
+    --swiper-pagination-bullet-horizontal-gap: 5px;
+}
+
 html,
 body {
     font-family: $fontFamily;
-    font-size: 16px;
-    line-height: 130%;
+    font-size: 17px;
+    line-height: toProcent(17, 21);
     color: $colorFont;
     font-weight: 400;
     scrollbar-gutter: stable;
-    background: url('@img/placeholder.png') 0 0 no-repeat;
+
+    @media (max-width: 380px) {
+        font-size: 16px;
+        line-height: toProcent(16, 24);
+    }
+
+    @supports not selector(::-webkit-scrollbar) {
+        scrollbar-width: thin;
+        scrollbar-color: $colorMain #fff;
+    }
 
     &::-webkit-scrollbar {
         width: 4px;
@@ -23,13 +38,47 @@ body {
         border: 1px solid transparent;
     }
 
-    scrollbar-width: 4px;
-    scrollbar-color: $colorMain #fff;
+    ::selection {
+        background: $colorMain;
+        color: #fff;
+    }
 }
 
 body {
-    &.lock {
+    &.is-lock {
         overflow: hidden;
+    }
+}
+
+* {
+    & br {
+        @media (max-width: 1200px) {
+            display: none;
+        }
+    }
+}
+
+.mobile-br {
+    & br {
+        display: block;
+    }
+}
+
+// Sections
+
+section {
+    margin: 100px 0;
+
+    @media (max-width: 992px) {
+        margin: 50px 0;
+    }
+
+    &:first-child {
+        margin-top: 0;
+    }
+
+    &:last-child {
+        margin-bottom: 0;
     }
 }
 
@@ -39,12 +88,51 @@ h1,
 h2,
 h3,
 h4 {
+    font-weight: 600;
+    color: $colorMain;
+}
+
+h1,
+h2 {
+    margin-bottom: 25px;
+    font-size: 50px;
+    line-height: toProcent(50, 61);
+
+    @media (max-width: 768px) {
+        font-size: 34px;
+        line-height: toProcent(34, 41);
+    }
+
+    &.small-title {
+        margin-bottom: 25px;
+        font-size: 45px;
+        line-height: toProcent(45, 54);
+
+        @media (max-width: 768px) {
+            font-size: 34px;
+            line-height: toProcent(34, 41);
+        }
+    }
 }
 
 // P
 
 p {
     & + p {
+        margin-top: 21px;
+
+        @media (max-width: 768px) {
+            margin-top: 16px;
+        }
+    }
+
+    & + ul,
+    & + ol {
+        margin-top: 20px;
+
+        @media (max-width: 768px) {
+            margin-top: 16px;
+        }
     }
 }
 
@@ -52,12 +140,88 @@ p {
 
 ol,
 ul {
+    & + p {
+        margin-top: 20px;
+
+        @media (max-width: 768px) {
+            margin-top: 16px;
+        }
+    }
+
+    &:not([class]) {
+        counter-reset: item;
+
+        & li {
+            counter-increment: item;
+            padding-left: 25px;
+            position: relative;
+
+            @media (max-width: 768px) {
+                padding-left: 19px;
+            }
+
+            &::before {
+                content: counter(item) ".";
+                position: absolute;
+                top: 0px;
+                left: 5px;
+
+                @media (max-width: 768px) {
+                    top: 1px;
+                    left: 0;
+                }
+            }
+        }
+    }
+}
+
+// UL
+
+ul {
+    &:not([class]) {
+        & li {
+            padding-left: 25px;
+            position: relative;
+
+            @media (max-width: 768px) {
+                padding-left: 19px;
+            }
+
+            &::before {
+                content: "";
+                position: absolute;
+                top: 10px;
+                left: 10px;
+                width: 5px;
+                height: 5px;
+                background: #626366;
+                border-radius: 50%;
+
+                @media (max-width: 768px) {
+                    top: 6px;
+                    left: 7px;
+                    width: 4px;
+                    height: 4px;
+                }
+            }
+        }
+    }
+}
+
+// a
+
+a {
+    color: $colorMain;
+    transition: all 0.3s ease-in-out 0s;
 }
 
 // Img
 
 img {
+    width: 100%;
     max-width: 100%;
+    max-height: 100%;
+    height: auto;
     object-fit: cover;
     object-position: center;
 }

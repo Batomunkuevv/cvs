@@ -1,0 +1,77 @@
+@use "sass:math";
+
+//*<Base>=======================================================================================================
+
+@import "base/fonts.scss";
+@import "base/function";
+@import "base/animation";
+@import "base/variables";
+@import "base/nullstyle";
+@import "base/common";
+
+//*</Base>=====================================================================================================
+
+//*<Components>================================================================================================
+
+@import "components/site-header";
+@import "components/site-footer";
+@import "components/menu";
+@import "components/burger";
+@import "components/button";
+@import "components/button-to-homepage";
+
+//*</Components>=================================================================================================
+
+//*<Main grid>==================================================================================================
+
+.wrapper {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    overflow: clip;
+}
+
+.container {
+    max-width: $maxWidthContainer;
+    margin: 0 auto;
+    padding: 0 15px;
+
+    @media (max-width: 1200px) {
+        max-width: 960px;
+    }
+    @media (max-width: 992px) {
+        max-width: 720px;
+    }
+    @media (max-width: 768px) {
+        max-width: 540px;
+    }
+    @media (max-width: 576px) {
+        max-width: 480px;
+        padding: 0 10px;
+    }
+
+    @media (max-width: 480px) {
+        max-width: 320px;
+        padding: 0 10px;
+    }
+}
+
+.site-page {
+    padding-bottom: 50px;
+    flex: 1 1 auto;
+
+    &--on-home {
+        padding-bottom: 100px;
+
+        @media (max-width: 992px) {
+            padding-bottom: 50px;
+        }
+    }
+}
+//*</Main grid>=================================================================================================
+
+//TODO<Blocks>=================================================================================================
+
+@import "blocks/post";
+
+//TODO</Blocks>=================================================================================================
